@@ -1,0 +1,25 @@
+S: Principio da Responsabilidade Única
+    Uma classe deve ter um, e somente um, motivo para mudar.
+        No projeto do Portal AlunITA, poderiam ter sido criados as classes Usuário, Matéria, Nota, Lembrete, etc.
+        Cada uma dessas classes seriam responsáveis apenas pelos conceitos e métodos que seus nomes representam. Assim,
+        por exemplo, a classe Nota poderia ter os métodos somar_nota, quanto_falta_para_R, etc.
+
+O: Princípio Aberto-Fechado
+    Você deve ser capaz de estender um comportamento de uma classe, sem modificá-lo.
+        Como citado no princípio L abaixo, o comportamento da classe Nota poderia ser extendido para NotaProva,
+        NotaAtividade, NotaPchance, etc.
+
+L: Princípio da Substituição de Liskov
+    As classes base devem ser substituíveis por suas classes derivadas.
+        Podem ser criadas subclasses da classe Nota, como por exemplo, NotaProva, NotaAtividade, NotaPchance, etc.
+        Essas classes teriam todas as propriedades da classe Nota, podendo substituí-la quando fosse necessário.
+
+I: Princípio da Segregação da Interface
+    Muitas interfaces específicas são melhores do que uma interface única.
+        Poderia haver interfaces que interagissem as classes Matéria com Nota, outra que interagisse Lembrete com
+        Matéria, por exemplo.
+
+D: Princípio da inversão da dependência
+    Dependa de uma abstração e não de uma implementação.
+        Lembretes pode depender de Nota e Matéria, mas como uma abstração e nao da forma como Nota e Matéria trabalham,
+        como calculam o que retornam nos seus métodos, etc.
